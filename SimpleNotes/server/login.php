@@ -1,9 +1,6 @@
 <?php
 require_once("dataBase.php");
 
-// $json = file_get_contents('php://input');
-//$data = json_decode($json);
-
 $resp["status"] = "failure";
 
 $stmt = $DB->prepare("SELECT * FROM users WHERE Login=:login");
@@ -17,4 +14,4 @@ if ($user["Passwd"] === $pass) {
     $resp["UserId"] = $user["Id"];
 }
 
-echo $resp;
+echo json_encode($resp);
