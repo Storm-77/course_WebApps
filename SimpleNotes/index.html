@@ -1,50 +1,72 @@
 <!DOCTYPE html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
-        integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <title>Jumbotron</title>
+    <meta name="description" content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.13.0/css/semantic.min.css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="client/main.css">
     <script src="client/script.js"></script>
-    <link rel="stylesheet" href="client/style.css">
-    <title>Document</title>
 </head>
 
 <body>
-
-    <div class="ui container center aligned">
-
-        <header class="ui secondaty pointing menu" style="margin-top: 20px;">
-            <input class="ui input item" type="text" name="" id="login" placeholder="Login">
-            <input class="ui input item" type="password" name="" id="password" placeholder="Password">
-            <div class="right menu">
-                <button class="ui button item" id="loginBtn">Login</button>
+    <nav class="ui menu inverted navbar page grid" style="margin-bottom: 0px">
+        <a href="" class="brand item">Simple notes</a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui input">
+                    <input type="input" id="login" placeholder="Login">
+                </div>
             </div>
-        </header>
-
-        <div class="notes">
-
-            <div class="ui grid">
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-                <div class="four wide column">sth</div>
-              </div>
+            <div class="item">
+                <div class="ui input">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="item"><button id="loginBtn" class="ui green button">Sign in</button></div>
+        </div>
+    </nav>
+    <!-- SOME TEXT -->
+    <!-- <div class="ui grid">
+        <div class="row">
+            <div class="column padding-reset">
+                <div class="ui huge message page grid">
+                    <h1 class="ui huge header">Hello, world!</h1>
+                    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                    <a class="ui blue button">Learn more &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="ui hidden divider"></div>
+    <div class="ui page grid">
+        <div class="three column row" id="notes">
 
         </div>
+        <!-- FOOTER  -->
+        <!-- <div class="row">
+            <div class="column">
+                <div class="ui divider"></div>
+                <span>&copy; Company 2014</span>
+            </div>
+        </div> -->
     </div>
+    <script id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.9'><\/script>".replace("HOST", location.hostname));
+        //]]>
+    </script>
 </body>
 
 </html>
